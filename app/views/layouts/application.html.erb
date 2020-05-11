@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ReactOnRailsExample</title>
+    <%# <title>ReactOnRailsExample</title> %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%# runtime is a 6kb chunk that got split out when I turn on splitChunks to split node_modules 
+        without including it, the react component won't be displayed %>
+    <%= javascript_pack_tag 'runtime' %>
+    <%= javascript_pack_tag 'vendors' %>
+    <%= yield :bundle %>
   </head>
 
   <body>

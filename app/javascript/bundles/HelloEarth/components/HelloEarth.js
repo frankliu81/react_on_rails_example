@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import _ from "lodash";
 
-export default class HealloEarth extends React.Component {
+export default class HelloEarth extends React.Component {
   static propTypes = {
     name: PropTypes.string.isRequired, // this is passed from the Rails view
   };
@@ -22,6 +23,9 @@ export default class HealloEarth extends React.Component {
   };
 
   render() {
+    const intersection = _.intersection([1, 3], [4, 3]);
+    console.log(`intersection ${intersection}`);
+
     return (
       <div>
         <h3>

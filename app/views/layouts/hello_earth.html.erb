@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>ReactOnRailsWithWebpacker</title>
-    <%= csrf_meta_tags %>
-    <%= javascript_pack_tag 'hello-earth-bundle' %>
-  </head>
+<% content_for :bundle do %>
+  <title>HelloEarth</title>
+  <%= javascript_pack_tag 'hello-earth-bundle' %>
+<% end %>
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
+<%= render template: "layouts/application" %>

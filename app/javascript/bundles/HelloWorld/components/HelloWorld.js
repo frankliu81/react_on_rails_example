@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import _ from "lodash";
 
 export default class HelloWorld extends React.Component {
   static propTypes = {
@@ -22,6 +23,9 @@ export default class HelloWorld extends React.Component {
   };
 
   render() {
+    const intersection = _.intersection([1, 2], [4, 2]);
+    console.log(`intersection ${intersection}`);
+  
     return (
       <div>
         <h3>
