@@ -1,0 +1,2 @@
+rails s
+bin/webpack -w
